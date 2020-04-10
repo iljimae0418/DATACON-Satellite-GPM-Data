@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 from xceptionnet import XceptionModel
 
 outputblocksize = 5
-outputblockindex = 0
+outputblockindex = [0,0]
 
 
 def data_gen(dataset, blocksize, blockindex):
@@ -34,10 +34,13 @@ def data_gen(dataset, blocksize, blockindex):
 
     for i in range(0,len(dataset)):
         temp = []
-        for j in range(blocksize * blockindex, blocksize * blockindex + blocksize):
-            for q in range(blocksize * blockindex, blocksize * blockindex + blocksize):
+        for j in range(blocksize * blockindex[0], blocksize * blockindex[0] + blocksize):
+            for q in range(blocksize * blockindex[1], blocksize * blockindex[1] + blocksize):
                 temp.append(dataset[i][j][q][14])
         label.append(temp)
+
+    batch = np.asarray(batch)
+    label = np.asarray(batch)
 
     return batch, label
 
