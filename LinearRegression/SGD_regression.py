@@ -1,15 +1,10 @@
 import numpy as np
 import pandas as pd
-import PIL
-from PIL import Image
-import cv2
 import os
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression, SGDRegressor
 import joblib
-import time
 
 train_dir = './train_processed/'
 train_files = [train_dir + x for x in os.listdir(train_dir)]
@@ -18,7 +13,7 @@ labels = ["b1","b2","b3","b4","b5","b6","b7","b8","b9","Indicator","GMI Longitud
 features = []
 cnt = 0
 
-lm = SGDRegressor(warm_start=True)
+lm = SGDRegressor(warm_start=True,max_iter=3000)
 # process train data
 for path in train_files[:10000]:
     print("Processing train datapoint {}........".format(cnt))
