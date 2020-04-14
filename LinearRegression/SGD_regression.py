@@ -68,7 +68,7 @@ submission_features = []
 for i in range(1,1601):
     submission_labels.append("px_"+str(i))
 ss = pd.read_csv('sample_submission.csv')
-splitted = np.split(prediction,20) # split into arrays each of 1600 elements
+splitted = np.split(prediction,len(test_files)) # split into arrays each of 1600 elements
 for x in splitted:
     x = tuple(x)
     submission_features.append(x)
