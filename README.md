@@ -35,7 +35,9 @@ ResNet: We realised that pixels that are far away from the regions where there i
 
 - Making the training more difficult for better generalization: We tried adding Gaussian noise at the beginning in the input data to make training more difficult. Also, added shuffling of the batches. Later on we also experimented with adding dropouts to our residual NN models. 
 
-- BatchNormalization: Instead of (manually) normalizing the inputs before feeding it into the network, we decided to BatchNormalize the inputs first and then feed the input into the neural network.  
+- BatchNormalization: Instead of (manually) normalizing the inputs before feeding it into the network, we decided to BatchNormalize the inputs first and then feed the input into the neural network.
+
+- Experimented with various batch sizes such as 128,512,1024,100,20,16 etc but eventually decided to run with a batch size of 1 as the network seemed to train much faster and the performance was not bad too. 
 
 - Concatenation instead of add for residual (skip) connections 
 
