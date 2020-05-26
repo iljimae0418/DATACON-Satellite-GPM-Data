@@ -3,6 +3,8 @@
 ## Introduction  
 Contest Link: https://dacon.io/competitions/official/235591/overview/   
 
+Very rough preliminary data analysis: https://github.com/iljimae0418/DATACON-Satellite-GPM-Data/blob/master/DACON%20precipitation%20prediction%20contest%20preliminary%20data%20analysis%20%2B%20Simple%20Linear%20Regression.ipynb 
+
 Brief Explanation of data: We are given 9 microwave images (of different wavelengths) of a particular region and these images are represented by images of size 40x40. We are also given information about the geographical region (encoded as numbers e.g. pixels encoded as 0 are ocean, pixels encoded as 1 are land etc) and the longitude/latitude information about each of the pixels. The output of the model should be a 40x40 pixels indicating the precipitation value for each pixel. 
 
 Scoring metric: MAE/F1. MAE is calculated only for pixels where the actual value of the precipitation is greater than 0.1. F1 score is calcualted after converting all the pixels with precipitation >= 0.1 to be 1 and precipitation < 0.1 to be 0. 
