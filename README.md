@@ -9,6 +9,10 @@ Scoring metric: MAE/F1. MAE is calculated only for pixels where the actual value
 
 Final Result: Top 10% on the private leaderboard (team name: Puzzle Collectors, ranked 17th out of 213 teams). Public leaderboard score of 1.53, private leaderboard score of 1.59.  
 
+## Environments 
+- Ran simple baseline models on local computer 
+- Migrated to Paperspace Gradient (cloud GPU service) for running deep learning models. Utilized P4000,P5000 and P6000 GPUs. 
+
 ## Methods 
 Baseline models: Applied linear regression (SGDRegressor) and Random Forest after seperating data into individual pixels. The python scripts are in folder LinearRegression and RegressionTrees. These baseline models recorded a MAE/F1 score of around 6.06 on the public leaderboard. 
 
