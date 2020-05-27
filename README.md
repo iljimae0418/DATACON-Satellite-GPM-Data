@@ -37,7 +37,7 @@ ResNet: We realised that pixels that are far away from the regions where there i
 
 - BatchNormalization: Instead of (manually) normalizing the inputs before feeding it into the network, we decided to BatchNormalize the inputs first and then feed the input into the neural network.
 
-- Experimented with various batch sizes such as 128,512,1024,100,20,16 etc but eventually decided to run with a batch size of 1 as the network seemed to train much faster and the performance was not bad too. 
+- Experimented with various batch sizes such as 128,512,1024,100,20,16 etc but eventually decided to run with a batch size of 1 as the network seemed to train much faster and the performance was not bad too. We also tried utilizing a data generator similar to [this one](https://www.google.com/search?q=stanford+keras+data+generator&oq=stanford+keras+data+generator&aqs=chrome..69i57j69i64j69i60.6411j0j7&sourceid=chrome&ie=UTF-8) instead of loading the entire dataset at once. 
 
 - Concatenation instead of add for residual (skip) connections 
 
