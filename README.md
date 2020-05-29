@@ -42,3 +42,5 @@ ResNet: We realised that pixels that are far away from the regions where there i
 - Concatenation instead of add for residual (skip) connections 
 
 - Instead of the simple average ensemble, we came up with our own method of ensembling. We ensembled an odd number of predictions (each from a different model) and if more than half of models agreed that there was no rain, then we set the prediction to zero, and if less than half of the models agreed that there was no rain, we take the average of the precipitations. This seemed to be much better than a simple averaging ensemble. 
+
+- Transfer learned weights from previously trained models to expedite the training process.  
