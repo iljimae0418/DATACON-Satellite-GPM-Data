@@ -10,7 +10,7 @@ Brief Explanation of data: We are given 9 microwave images (of different wavelen
 
 Scoring metric: MAE/F1. MAE is calculated only for pixels where the actual value of the precipitation is greater than 0.1. F1 score is calcualted after converting all the pixels with precipitation >= 0.1 to be 1 and precipitation < 0.1 to be 0. 
 
-Final Result: Top 10% on the private leaderboard (team name: Puzzle Collectors, ranked 17th out of 213 teams). Public leaderboard score of 1.53, private leaderboard score of 1.59. 
+Final Result: Top 8% on the private leaderboard (team name: Puzzle Collectors, ranked 17th out of 213 teams). Public leaderboard score of 1.53, private leaderboard score of 1.59. 
 
 ## Environments 
 - Ran simple baseline models on local computer 
